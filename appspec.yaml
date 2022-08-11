@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: arn:aws:ecs:eu-west-1:981134614696:task-definition/cp-kafka-connect:2
+        LoadBalancerInfo:
+          ContainerName: cp-kafka-connect
+          ContainerPort: 8083
